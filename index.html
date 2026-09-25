@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/theme.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Cocoa Website</title>
+</head>
+
+<body>
+  <!-- Background Particles Container -->
+  <div class="particles-container" aria-hidden="true">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/src/assets/cocoa.gif" alt="Cocoa Logo">
+      </a>
+
+      <nav class="nav-box">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/server.html">Server</a></li>
+          <li><a href="/giveaways.html">Giveaways</a></li>
+          <li><a href="/promos.html">Promos</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta-group">
+        <a href="https://discord.gg/cocoa" class="btn-cta" target="_blank" rel="noopener noreferrer">Join Server</a>
+        <a href="https://discord.gg/orders" class="btn-cta btn-brown" target="_blank"
+          rel="noopener noreferrer">Promos</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="hero">
+      <span class="hero-badge">ONE COMMUNITY FOR EVERYONE</span>
+      <h1 class="hero-title">Welcome to Cocoa!</h1>
+      <p class="hero-description">Your one-stop destination for all things Cocoa. Explore our server, participate in
+        giveaways, and enjoy exclusive promos.</p>
+
+      <div class="hero-actions">
+        <a href="https://discord.gg/cocoa" class="btn-cta hero-btn" target="_blank" rel="noopener noreferrer">Join Our
+          Discord</a>
+      </div>
+
+      <!-- Profile Card -->
+      <div class="card">
+        <div class="card-avatar-wrapper">
+          <img id="card-avatar" src="/src/assets/cocoa.gif" alt="Sprit Avatar">
+          <img id="avatar-deco" class="avatar-decoration hidden" src="" alt="Avatar Decoration">
+        </div>
+        <h2 class="card-name">Sprit</h2>
+        <span class="card-handle">@sprithold</span>
+        <p class="card-bio">Founder and one of the big reasons for the success of Cocoa.</p>
+
+      </div>
+
+      <div class="contributors-card">
+        <div class="contributors-header">
+          <span class="sparkle-icon">✨</span>
+          <h3>Main OGs &amp; Contributors</h3>
+        </div>
+        <div class="contributors-list">
+          <span class="contributor-tag active" data-user="sprit">Sprit</span>
+          <span class="contributor-tag" data-user="calvin">Calvin</span>
+          <span class="contributor-tag" data-user="zen">zen</span>
+          <span class="contributor-tag" data-user="alpy">alpy</span>
+          <span class="contributor-tag" data-user="yuki">yuki</span>
+        </div>
+      </div>
+
+      <button id="music-toggle" type="button" class="btn-cta music-toggle" aria-pressed="false">
+        <span class="music-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        </span>
+        <span class="music-label">Turn On Music</span>
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://discord.gg/cocoa" target="_blank" rel="noopener noreferrer">Discord Server</a>
+        <a href="https://discord.gg/orders" target="_blank" rel="noopener noreferrer">Promos &amp; Orders</a>
+        <a href="/giveaways.html">Giveaways</a>
+      </div>
+      <p class="footer-credits">
+        Made by <strong>aditya270</strong> (<a href="https://discord.com/users/aditya27003" target="_blank" rel="noopener noreferrer">@aditya27003</a>) for Cocoa
+      </p>
+    </div>
+  </footer>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

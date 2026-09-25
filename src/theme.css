@@ -1,0 +1,55 @@
+/* theme.css */
+
+:root {
+  /* =========================================
+     BROWNS (Used for Backgrounds & Surfaces)
+     Hue: 20-25 | Saturation: 35-45%
+     ========================================= */
+  --brown-base-hue: 24;
+  --brown-base-sat: 40%;
+
+  /* Darkest to lightest brown layers */
+  --brown-900: hsl(var(--brown-base-hue), var(--brown-base-sat), 8%);  /* Deepest brown / Page background */
+  --brown-800: hsl(var(--brown-base-hue), var(--brown-base-sat), 12%); /* Primary surface / Container bg */
+  --brown-700: hsl(var(--brown-base-hue), var(--brown-base-sat), 18%); /* Elevated cards / Dropdowns */
+  --brown-600: hsl(var(--brown-base-hue), var(--brown-base-sat), 25%); /* Hover states / Active cards */
+  --brown-500: hsl(var(--brown-base-hue), var(--brown-base-sat), 35%); /* Subtle borders / Dividers */
+  --brown-400: hsl(var(--brown-base-hue), var(--brown-base-sat), 50%); /* Accent brown / Secondary highlights */
+
+  /* =========================================
+     WHITES & CREAMS (Primary Text & Highlights)
+     High contrast against dark brown
+     ========================================= */
+  --white-pure:  hsl(0, 0%, 100%);     /* Pure white for crisp contrast */
+  --white-warm:  hsl(38, 30%, 95%);    /* Soft cream - Best for main body text */
+  --white-muted: hsl(35, 20%, 75%);    /* Warm light grey - Secondary text */
+  --white-faint: hsl(35, 15%, 55%);    /* Captions & disabled text */
+
+  /* =========================================
+     BLACKS & CHARCOALS (Deep Accents & Overlays)
+     Where to use black on dark brown:
+     - High-contrast buttons
+     - Modals / Popover overlays
+     - Subtle inset shadows / Borders
+     ========================================= */
+  --black-pure:    hsl(0, 0%, 0%);       /* Pure black for overlays/shadows */
+  --black-rich:    hsl(20, 15%, 6%);     /* Ultra-dark accent container */
+  --black-overlay: hsla(0, 0%, 0%, 0.4); /* Transparent dark overlay */
+
+  /* =========================================
+     SEMANTIC ASSIGNMENTS (Brown Background Focus)
+     ========================================= */
+  --bg-page:        var(--brown-900);
+  --bg-surface:     var(--brown-800);
+  --bg-card:        var(--brown-700);
+  --bg-card-hover:  var(--brown-600);
+
+  --text-primary:   var(--white-warm);   /* Cream white on brown bg */
+  --text-secondary: var(--white-muted); /* Muted warm grey */
+
+  --border-subtle:  var(--brown-600);
+  
+  /* Black utilized as a distinct high-contrast accent element */
+  --btn-dark-bg:    var(--black-rich);
+  --btn-dark-text:  var(--white-warm);
+}
