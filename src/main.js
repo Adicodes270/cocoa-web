@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Global click delegate for interactive controls
   document.addEventListener('click', (event) => {
-    const target = event.target.closest('a, button:not(#music-toggle), .contributor-tag, .card, .contributors-card');
+    if (event.target.closest('.contributor-tag')) return;
+
+    const target = event.target.closest('button:not(#music-toggle), .card, .contributors-card');
     if (target) {
       playClickSound();
     }
@@ -243,3 +245,18 @@ async function fetchDiscordAvatarREST() {
     console.error('Failed to load Lanyard avatar:', error);
   }
 }
+
+document.querySelectorAll('.card , .contributors-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    const rotateX = y / rect.height * 50;
+    const rotateY = -x / rect.width * 50;
+    card.style.transform = `perspective(500px) scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(500px) scale(1) rotateX(0deg) rotateY(0deg)'
+  });
+});
