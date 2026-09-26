@@ -30,9 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Global click delegate for interactive controls
   document.addEventListener('click', (event) => {
-    if (event.target.closest('.contributor-tag')) return;
-
-    const target = event.target.closest('button:not(#music-toggle), .card, .contributors-card');
+    const target = event.target.closest('button:not(#music-toggle)');
     if (target) {
       playClickSound();
     }
