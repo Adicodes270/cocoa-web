@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="src/assets/cocoa.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +44,26 @@
         <a href="https://discord.gg/cocoa" class="btn-cta" target="_blank" rel="noopener noreferrer">Join Server</a>
         <a href="https://discord.gg/orders" class="btn-cta btn-brown" target="_blank"
           rel="noopener noreferrer">Promos</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-mobile-panel" id="navMobilePanel">
+        <a href="/index.html">Home</a>
+        <a href="/server.html">Server</a>
+        <a href="/giveaways.html">Giveaways</a>
+        <a href="/promos.html">Promos</a>
       </div>
     </div>
   </header>
@@ -62,6 +82,7 @@
 
       <!-- Profile Card -->
       <div class="card">
+        <div class="glow-follow"></div>
         <div class="card-avatar-wrapper">
           <img id="card-avatar" src="/src/assets/cocoa.gif" alt="Sprit Avatar">
           <img id="avatar-deco" class="avatar-decoration hidden" src="" alt="Avatar Decoration">
@@ -73,6 +94,7 @@
       </div>
 
       <div class="contributors-card">
+        <div class="glow-follow"></div>
         <div class="contributors-header">
           <span class="sparkle-icon">✨</span>
           <h3>Main OGs &amp; Contributors</h3>
@@ -108,7 +130,8 @@
         <a href="/giveaways.html">Giveaways</a>
       </div>
       <p class="footer-credits">
-        Made by <strong>aditya270</strong> (<a href="https://discord.com/users/aditya27003" target="_blank" rel="noopener noreferrer">@aditya27003</a>) for Cocoa
+        Made by <strong>aditya270</strong> (<a href="https://discord.com/users/aditya27003" target="_blank"
+          rel="noopener noreferrer">@aditya27003</a>) for Cocoa
       </p>
     </div>
   </footer>
