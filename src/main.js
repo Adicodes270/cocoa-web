@@ -140,6 +140,10 @@ function initCardTilt() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Kick off avatar fetching first thing, so it has the most time to
+  // resolve before/during the entrance animation below.
+  initLanyardRealtime();
+
   // 1. Initialize Lenis Smooth Scroll
   const lenis = new Lenis({
     duration: 1.2,
@@ -316,8 +320,6 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     });
   });
-
-  initLanyardRealtime();
 });
 
 const DISCORD_USER_ID = '1467514693664116902';
@@ -359,6 +361,12 @@ function updateAvatarUI(userData) {
 }
 
 function initLanyardRealtime() {
+  // Kick off a fast one-shot REST fetch immediately, in parallel with the
+  // websocket handshake, so the real avatar has the best chance of loading
+  // while the GSAP entrance animation is still playing, instead of only
+  // falling back to REST after the websocket has already failed.
+  fetchDiscordAvatarREST();
+
   const ws = new WebSocket('wss://api.lanyard.rest/socket');
 
   ws.onopen = () => {
